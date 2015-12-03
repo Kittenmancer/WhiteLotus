@@ -183,7 +183,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\Classes.cs" />
-    <Compile Include="Models\Entities\User.cs" />
     <Compile Include="Models\Entities\Workshop.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -250,7 +249,9 @@
     <Content Include="Scripts\vendor\respond.js" />
     <Content Include="Scripts\vendor\respond.min.js" />
     <Content Include="Scripts\vendor\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
