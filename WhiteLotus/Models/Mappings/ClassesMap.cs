@@ -16,7 +16,7 @@ namespace WhiteLotus.Models.Mappings
 
             Id(x => x.Id, m => m.Generator(Generators.Identity));
             Property(x => x.Name);
-            Property(x => x.Date);
+            Property(x => x.Day);
             Property(x => x.StartTime);
             Property(x => x.Duration);
             Property(x => x.Capacity);
