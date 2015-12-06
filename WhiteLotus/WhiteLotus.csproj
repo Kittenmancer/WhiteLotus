@@ -58,6 +58,14 @@
       <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -179,6 +187,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Filters\ContentManagersOnlyFilterAttribute.cs" />
     <Compile Include="Filters\DevelopersOnlyFilterAttribute.cs" />
     <Compile Include="Filters\LoadLoggedInUserAttribute.cs" />
@@ -187,6 +196,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infastructure\ICurrentUserAware.cs" />
+    <Compile Include="Infastructure\NHibernateEntityBinder.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
     <Compile Include="Models\Entities\Classes.cs" />
     <Compile Include="Models\Entities\Users.cs" />
@@ -195,6 +205,7 @@
     <Compile Include="Models\Mappings\BookingMap.cs" />
     <Compile Include="Models\Mappings\ClassesMap.cs" />
     <Compile Include="Models\Mappings\UsersMap.cs" />
+    <Compile Include="Models\Queries\UserFromEmail.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -280,6 +291,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\app\Site.css" />
     <Content Include="obj\Debug\WhiteLotus.csproj.FileListAbsolute.txt" />
@@ -353,18 +365,18 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Session\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Session\ConfirmEmail.cshtml" />
-    <Content Include="Views\Session\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Session\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Session\ForgotPassword.cshtml" />
-    <Content Include="Views\Session\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Session\Login.cshtml" />
-    <Content Include="Views\Session\Register.cshtml" />
-    <Content Include="Views\Session\ResetPassword.cshtml" />
-    <Content Include="Views\Session\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Session\SendCode.cshtml" />
-    <Content Include="Views\Session\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
@@ -376,10 +388,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Mapping\" />
-    <Folder Include="Models\Queries\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Session\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
