@@ -13,16 +13,16 @@ using WhiteLotus.Models;
 namespace WhiteLotus.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class SessionController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
+        public SessionController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public SessionController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;

@@ -11,7 +11,7 @@ using WhiteLotus.Models;
 namespace WhiteLotus.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -304,7 +304,7 @@ namespace WhiteLotus.Controllers
         public ActionResult LinkLogin(string provider)
         {
             // Request a redirect to the external login provider to link a login for the current user
-            return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
+            return new SessionController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
         }
 
         //
