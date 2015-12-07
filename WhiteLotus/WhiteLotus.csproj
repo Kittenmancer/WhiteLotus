@@ -205,6 +205,7 @@
     <Compile Include="Models\Mappings\BookingMap.cs" />
     <Compile Include="Models\Mappings\ClassesMap.cs" />
     <Compile Include="Models\Mappings\UsersMap.cs" />
+    <Compile Include="Models\Mappings\WorkshopMap.cs" />
     <Compile Include="Models\Queries\UserFromEmail.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
