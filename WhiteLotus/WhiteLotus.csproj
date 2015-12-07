@@ -389,7 +389,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Base\" />
     <Folder Include="Views\Session\" />
   </ItemGroup>
   <ItemGroup>
