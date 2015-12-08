@@ -301,8 +301,8 @@
     <Content Include="obj\Debug\WhiteLotus.dll" />
     <Content Include="obj\Debug\WhiteLotus.pdb" />
     <Content Include="Scripts\app\Site.js" />
+    <Content Include="Scripts\vendor\bootstrap-switch.js" />
     <Content Include="Scripts\vendor\bootstrap.js" />
-    <Content Include="Scripts\vendor\bootstrap.min.js" />
     <Content Include="Content\less\animated.less" />
     <Content Include="Content\less\bordered-pulled.less" />
     <Content Include="Content\less\core.less" />
@@ -342,15 +342,15 @@
     <Content Include="obj\Debug\WhiteLotus.csprojResolveAssemblyReference.cache" />
     <None Include="Scripts\vendor\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-1.10.2.js" />
-    <Content Include="Scripts\vendor\jquery-1.10.2.min.js" />
     <None Include="Scripts\vendor\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\vendor\jquery-2.1.4.js" />
+    <Content Include="Scripts\vendor\jquery-ui.js" />
+    <Content Include="Scripts\vendor\jquery.form.js" />
     <Content Include="Scripts\vendor\jquery.validate.js" />
-    <Content Include="Scripts\vendor\jquery.validate.min.js" />
     <Content Include="Scripts\vendor\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\vendor\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\vendor\modernizr-2.6.2.js" />
     <Content Include="Scripts\vendor\respond.js" />
-    <Content Include="Scripts\vendor\respond.min.js" />
+    <Content Include="Scripts\vendor\slick.js" />
     <Content Include="Scripts\vendor\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
