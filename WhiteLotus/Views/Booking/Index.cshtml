@@ -3,5 +3,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Booking</h2>
+<div class="row">
+    <div class="col-md-12"> <h2>Book a Class or Workshop<br /><small>A Class is run on a weekly basis and a Workshop is a one off session</small></h2> </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label>@Html.RadioButtonFor(m => m.item, "Book a Class")</label>
+        <label>@Html.RadioButtonFor(m => m.item, "Book a Workshop")</label>
+
+    </div>
+</div>
+
 
