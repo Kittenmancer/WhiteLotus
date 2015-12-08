@@ -15,11 +15,11 @@ p {
 }
 
 a {
-    color: #EB954C;
+    color: #009933;
 }
 
 a:focus, a:hover {
-    color: #CC6A16;
+    color: #008040;
 }
 
 /*
@@ -27,7 +27,7 @@ a:focus, a:hover {
     -------
 */
 .navbar-default {
-    background-color: #EB954C;
+    background-color: #009933;
     color: #FFFFFF;
     border: 0;
 }
@@ -48,20 +48,20 @@ a:focus, a:hover {
 }
 .navbar .brand, .navbar .nav > li > a:hover {
     color: #FFFFFF;
-    background-color: #e37619;
+    background-color: #008c12;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
      color: #FFFFFF;
-    background-color: #e37619;
+    background-color: #008c12;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
-    background-color:#e37619;
+    background-color:#008c12;
     color: #ffffff;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    background-color: #e37619;
+    background-color: #008c12;
     color: #ffffff;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
@@ -70,11 +70,11 @@ a:focus, a:hover {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    background-color: #EB954C;
+    background-color: #009933;
     color: #ffffff;
 }
 .nav-pills>li.active>a>small, .nav-pills>li.active>a:focus>small, .nav-pills>li.active>a:hover>small {
-    background-color: #EB954C;
+    background-color: #009933;
     color: #ffffff;
 }
 
@@ -89,7 +89,7 @@ a:focus, a:hover {
     font-size: 24px;
 }
 .modal-title {
-    color: #e37619;
+    color: #008c12;
 }
 
 /*
@@ -98,7 +98,7 @@ a:focus, a:hover {
 */
 
 .nav-pills>li>a{
-    color: #EB954C;
+    color: #009933;
 }
 .nav-pills>li>a>small {
     color: #666666;
@@ -146,7 +146,7 @@ a:focus, a:hover {
 
 .card-title {
     margin-top: 0;
-    color: #EB954C;
+    color: #009933;
 }
 
 .card.card-bottom {
@@ -167,7 +167,7 @@ a:focus, a:hover {
     ------
 */
 footer {
-    border-top: 1px solid #eb954c;
+    border-top: 1px solid #009933;
     padding-top: 15px;
     text-align: center;
     margin-top: 15px;
@@ -180,11 +180,11 @@ footer {
 */
 
 .panel-primary {
-    border-color: #eb954c;
+    border-color: #009933;
 }
 .panel-primary .panel-heading {
-    background-color: #eb954c;
-    border-color: #eb954c;
+    background-color: #009933;
+    border-color: #009933;
 }
 
 
@@ -194,7 +194,7 @@ footer {
     --------
 */
 .fa-cog-primary {
-    color: #eb954c;
+    color: #009933;
 }
 
 /*
@@ -202,23 +202,23 @@ footer {
     -------
 */
 .btn-primary {
-    background-color: #EB954C;
-    border-color: #EB954C;
+    background-color: #009933;
+    border-color: #009933;
 } 
 
 .btn-primary:hover {
-    background-color: #CC6A16;
-    border-color: #cc6a16;
+    background-color: #008040;
+    border-color: #008040;
 }
 
 .btn-primary.focus, .btn-primary:focus {
-    background-color: #CC6A16;
-    border-color: #cc6a16;
+    background-color: #008040;
+    border-color: #008040;
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
     background-color: #B55E14;
-    border-color: #cc6a16;
+    border-color: #008040;
     outline-color: #B55E14;
 }
 .btn-primary.disabled {
@@ -227,7 +227,7 @@ footer {
 }
 .btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
     background-color: #B55E14;
-    border-color: #cc6a16;
+    border-color: #008040;
     outline-color: #B55E14;
 }
 
@@ -236,12 +236,12 @@ footer {
     -------------
 */
 label {
-    color: #e37619;
+    color: #008c12;
 }
 
 .form-control:focus {
-    border-color: #EB954C;
-    box-shadow: 0 0 8px #EB954C;
+    border-color: #009933;
+    box-shadow: 0 0 8px #009933;
 
 }
 
@@ -255,11 +255,11 @@ label {
     -------
 */
 .mce-menu-item:hover, .mce-menu-item.mce-selected, .mce-menu-item:focus {
-    background-color: #EB954C !important;
+    background-color: #009933 !important;
 }
 .mce-grid-border a:hover, .mce-grid-border a.mce-active {
-    border-color: #EB954C !important;
-    background: #EB954C !important;
+    border-color: #009933 !important;
+    background: #009933 !important;
 
 }
 .mce-tinymce .mce-container .mce-panel {
@@ -291,14 +291,14 @@ label {
 }
 
 .mce-textbox:focus, .mce-textbox.mce-focus {
-    border-color: #eb954c !important;
+    border-color: #009933 !important;
 }
 .mce-primary {
-    background-color: #eb954c !important;
+    background-color: #009933 !important;
 }
 
 .mce-primary:hover {
-    background-color: #CC6A16 !important;
+    background-color: #008040 !important;
 }
 
 .mce-primary:active {
@@ -306,7 +306,7 @@ label {
 }
 
 .mce-menu-item-normal.mce-active {
-    background-color: #eb954c !important;
+    background-color: #009933 !important;
 }
 
 /*
@@ -322,7 +322,7 @@ label {
 }
 
 .slick-prev, .slick-next {
-    background-color: #e37619;
+    background-color: #008c12;
     color: #ffffff;
     font-size: 14px;
     margin-top: -15px;
@@ -363,7 +363,7 @@ label {
 */
 #passwordSuccess {
     display: none;
-    color: #EB954C;
+    color: #009933;
     font-weight: 700;
 }
 
@@ -394,7 +394,7 @@ label {
 }
 
 #copySuccess {
-    color: #eb954c;
+    color: #009933;
     display: none;
 }
 /*
@@ -403,16 +403,16 @@ label {
 */
 
 .bootstrap-switch .bootstrap-switch-wrapper .bootstrap-switch-animate .bootstrap-switch-on .bootstrap-switch-focused {
-    background-color: #eb954c;
-    border-color: #e37619
+    background-color: #009933;
+    border-color: #008c12
 }
 .bootstrap-switch .bootstrap-switch-wrapper .bootstrap-switch-animate .bootstrap-switch-off .bootstrap-switch-focused {
-    background-color: #eb954c;
-    border-color: #e37619
+    background-color: #009933;
+    border-color: #008c12
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
-    background: #eb954c;
+    background: #009933;
 }
 .bootstrap-switch.bootstrap-switch-focused {
-    border-color: #eb954c;
+    border-color: #009933;
 }
