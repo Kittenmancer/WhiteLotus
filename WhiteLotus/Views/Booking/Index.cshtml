@@ -1,4 +1,4 @@
-﻿
+﻿@model WhiteLotus.ViewModels.BookingViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -8,9 +8,8 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <label>@Html.RadioButtonFor(m => m.item, "Book a Class")</label>
-        <label>@Html.RadioButtonFor(m => m.item, "Book a Workshop")</label>
-
+        <label>@Html.RadioButtonFor(m => m.Class.Name, "Book a Class")</label>
+        <label>@Html.RadioButtonFor(m => m.Workshop.Name, "Book a Workshop")</label>
     </div>
 </div>
 
