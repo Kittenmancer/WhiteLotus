@@ -9,13 +9,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{739CF258-BC1F-443B-ADC2-5E244FA5C1DF}</ProjectGuid>
+    <ProjectGuid>{192C0D67-6714-42F4-9B43-0F2521D7F71F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WhiteLotus</RootNamespace>
     <AssemblyName>WhiteLotus</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -25,7 +25,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,15 +67,17 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -117,7 +118,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -184,174 +184,58 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SessionController.cs" />
-    <Compile Include="Filters\ContentManagersOnlyFilterAttribute.cs" />
-    <Compile Include="Filters\DevelopersOnlyFilterAttribute.cs" />
-    <Compile Include="Filters\LoadLoggedInUserAttribute.cs" />
-    <Compile Include="Filters\UsersOnlyFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infastructure\ICurrentUserAware.cs" />
-    <Compile Include="Infastructure\NHibernateEntityBinder.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
     <Compile Include="Models\Entities\Classes.cs" />
     <Compile Include="Models\Entities\Users.cs" />
     <Compile Include="Models\Entities\Workshop.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IQuery.cs" />
     <Compile Include="Models\Mappings\BookingMap.cs" />
     <Compile Include="Models\Mappings\ClassesMap.cs" />
     <Compile Include="Models\Mappings\UsersMap.cs" />
     <Compile Include="Models\Mappings\WorkshopMap.cs" />
-    <Compile Include="Models\Queries\UserFromEmail.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="ViewModels\AccountViewModels.cs" />
-    <Compile Include="ViewModels\BookingViewModel.cs" />
-    <Compile Include="ViewModels\IdentityModels.cs" />
-    <Compile Include="ViewModels\ManageViewModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Antlr3.Runtime.dll" />
-    <Content Include="bin\Antlr3.Runtime.pdb" />
-    <Content Include="bin\EntityFramework.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\EntityFramework.xml" />
-    <Content Include="bin\Iesi.Collections.dll" />
-    <Content Include="bin\Iesi.Collections.xml" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
-    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
-    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\Microsoft.Owin.dll" />
-    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
-    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.xml" />
-    <Content Include="bin\Microsoft.Owin.xml" />
-    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\Newtonsoft.Json.xml" />
-    <Content Include="bin\NHibernate.dll" />
-    <Content Include="bin\NHibernate.xml" />
-    <Content Include="bin\Owin.dll" />
-    <Content Include="bin\roslyn\csc.exe" />
-    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="bin\roslyn\vbc.exe" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
-    <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
-    <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\System.Web.Optimization.xml" />
-    <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
-    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
-    <Content Include="bin\System.Web.WebPages.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.xml" />
-    <Content Include="bin\WebGrease.dll" />
-    <Content Include="bin\WhiteLotus.dll" />
-    <Content Include="bin\WhiteLotus.pdb" />
+    <Content Include="Content\css\app\Site.css" />
     <Content Include="Content\css\vendor\bootstrap-switch.css" />
     <Content Include="Content\css\vendor\bootstrap.css" />
     <Content Include="Content\css\vendor\font-awesome.css" />
     <Content Include="Content\css\vendor\jquery-ui.css" />
     <Content Include="Content\css\vendor\jquery-ui.structure.css" />
     <Content Include="Content\css\vendor\jquery-ui.theme.css" />
+    <Content Include="Content\css\vendor\slick-theme.css" />
+    <Content Include="Content\css\vendor\slick.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\css\app\Site.css" />
-    <Content Include="obj\Debug\WhiteLotus.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\WhiteLotus.dll" />
-    <Content Include="obj\Debug\WhiteLotus.pdb" />
     <Content Include="Scripts\app\Site.js" />
     <Content Include="Scripts\vendor\bootstrap-switch.js" />
     <Content Include="Scripts\vendor\bootstrap.js" />
-    <Content Include="Content\less\animated.less" />
-    <Content Include="Content\less\bordered-pulled.less" />
-    <Content Include="Content\less\core.less" />
-    <Content Include="Content\less\fixed-width.less" />
-    <Content Include="Content\less\font-awesome.less" />
-    <Content Include="Content\less\icons.less" />
-    <Content Include="Content\less\larger.less" />
-    <Content Include="Content\less\list.less" />
-    <Content Include="Content\less\mixins.less" />
-    <Content Include="Content\less\path.less" />
-    <Content Include="Content\less\rotated-flipped.less" />
-    <Content Include="Content\less\stacked.less" />
-    <Content Include="Content\less\variables.less" />
-    <Content Include="Content\scss\font-awesome.scss" />
-    <Content Include="Content\scss\_animated.scss" />
-    <Content Include="Content\scss\_bordered-pulled.scss" />
-    <Content Include="Content\scss\_core.scss" />
-    <Content Include="Content\scss\_fixed-width.scss" />
-    <Content Include="Content\scss\_icons.scss" />
-    <Content Include="Content\scss\_larger.scss" />
-    <Content Include="Content\scss\_list.scss" />
-    <Content Include="Content\scss\_mixins.scss" />
-    <Content Include="Content\scss\_path.scss" />
-    <Content Include="Content\scss\_rotated-flipped.scss" />
-    <Content Include="Content\scss\_stacked.scss" />
-    <Content Include="Content\scss\_variables.scss" />
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="bin\WhiteLotus.dll.config" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\WhiteLotus.csprojResolveAssemblyReference.cache" />
     <None Include="Scripts\vendor\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-1.10.2.js" />
-    <None Include="Scripts\vendor\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\vendor\jquery-2.1.4.js" />
     <Content Include="Scripts\vendor\jquery-ui.js" />
     <Content Include="Scripts\vendor\jquery.form.js" />
+    <None Include="Scripts\vendor\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\vendor\jquery.validate.js" />
     <Content Include="Scripts\vendor\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\vendor\modernizr-2.6.2.js" />
     <Content Include="Scripts\vendor\respond.js" />
     <Content Include="Scripts\vendor\slick.js" />
-    <Content Include="Scripts\vendor\_references.js" />
+    <None Include="Scripts\vendor\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -388,18 +272,51 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Booking\Index.cshtml" />
-    <Content Include="Views\Session\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Models\Queries\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\less\animated.less" />
+    <Content Include="Content\less\bordered-pulled.less" />
+    <Content Include="Content\less\core.less" />
+    <Content Include="Content\less\fixed-width.less" />
+    <Content Include="Content\less\font-awesome.less" />
+    <Content Include="Content\less\icons.less" />
+    <Content Include="Content\less\larger.less" />
+    <Content Include="Content\less\list.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\path.less" />
+    <Content Include="Content\less\rotated-flipped.less" />
+    <Content Include="Content\less\stacked.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\scss\font-awesome.scss" />
+    <Content Include="Content\scss\_animated.scss" />
+    <Content Include="Content\scss\_bordered-pulled.scss" />
+    <Content Include="Content\scss\_core.scss" />
+    <Content Include="Content\scss\_fixed-width.scss" />
+    <Content Include="Content\scss\_icons.scss" />
+    <Content Include="Content\scss\_larger.scss" />
+    <Content Include="Content\scss\_list.scss" />
+    <Content Include="Content\scss\_mixins.scss" />
+    <Content Include="Content\scss\_path.scss" />
+    <Content Include="Content\scss\_rotated-flipped.scss" />
+    <Content Include="Content\scss\_stacked.scss" />
+    <Content Include="Content\scss\_variables.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\vendor\jquery-1.10.2.min.map" />
   </ItemGroup>
@@ -419,9 +336,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53796</DevelopmentServerPort>
+          <DevelopmentServerPort>50996</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53796/</IISUrl>
+          <IISUrl>http://localhost:50996/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

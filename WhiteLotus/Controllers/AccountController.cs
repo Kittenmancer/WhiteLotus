@@ -13,7 +13,7 @@ using WhiteLotus.Models;
 namespace WhiteLotus.Controllers
 {
     [Authorize]
-    public class AccountController : BaseController
+    public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
