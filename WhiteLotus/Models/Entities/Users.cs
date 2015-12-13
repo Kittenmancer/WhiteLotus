@@ -25,6 +25,17 @@ namespace WhiteLotus.Models.Entities
         public virtual string Password { get; set; }
         public virtual bool Deleted { get; set; }
 
+        /// <summary>
+        /// Check whether the given plaintext password is the valid password for this user.
+        /// </summary>
+        /// <param name="plainPassword">Plaintext password to check</param>
+        /// <returns>Validity of given password for this user</returns>
+        public virtual bool CheckPassword(string plainPassword)
+        {
+            var match = (plainPassword) == Password;
+            return match;
+        }
+
         public virtual string UserType
 
         {

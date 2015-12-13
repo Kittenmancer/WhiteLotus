@@ -10,16 +10,16 @@ namespace WhiteLotus.Models.Queries
 {
     public class UserFromEmail : IQuery<Users>
     {
-        private readonly string _username;
+        private readonly string _email;
 
         public UserFromEmail(string email)
         {
-            _username = email;
+            _email = email;
         }
 
         public Users Execute(ISession session)
         {
-            return session.Query<Users>().FirstOrDefault(u => u.Email == _username);
+            return session.Query<Users>().FirstOrDefault(u => u.Email == _email);
         }
     }
 }

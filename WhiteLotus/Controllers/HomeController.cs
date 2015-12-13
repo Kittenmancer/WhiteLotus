@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WhiteLotus.Models.Entities;
+using WhiteLotus.ViewModels;
+
 
 namespace WhiteLotus.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
-            return View();
+            var vM = new HomeViewModel();
+            return View(vM);
         }
 
         public ActionResult About()

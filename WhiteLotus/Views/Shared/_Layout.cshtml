@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using WhiteLotus
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,6 +21,7 @@
     <script src="~/Scripts/vendor/slick.js"></script>
     <script src="~/Scripts/vendor/bootstrap-switch.js"></script>
     <script src="@Url.Content("~/Scripts/app/site.js")"></script>
+    @RenderSection("head", false)
 </head>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -33,16 +38,76 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Register", "Users")">Register</a></li>
+                    <li><a href="@Url.Action("Login", "Users")">Login</a></li>
+                    <li><a href="@Url.Action("Booking","Booking")">Bookings</a></li>
+                </ul>
+                @if (ViewBag.CurrentUser != null) { 
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-user"></span><b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (ViewBag.CurrentUser.isManager || ViewBag.CurrentUser.isDeveloper)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Manage", "Colleges")">Manage Member Colleges</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Manage", "News")">Manage News Items</a>
+                                    </li>
+                                }
+                                @if (ViewBag.CurrentUser.IsDeveloper)
+                                {
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="@Url.Action("Manage","Users")">Manage Users</a>
+                                    </li>
+                                }
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="@Url.Action("ChangeOwnPassword", "Users")">Change Password</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Logout", "Session")">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    }
+                </ul>
             </div>
         </div>
     </div>
+    <div id="errors-container">
+        @if (TempData.ContainsKey("error"))
+        {
+            <div class="container error">
+                @TempData["error"]
+                <button type="button" class="close">&times;</button>
+            </div>
+        }
+    </div>
+
+    <div id="notices-container">
+        @if (TempData.ContainsKey("notice"))
+        {
+            <div class="container notice">
+                @TempData["notice"]
+                <button type="button" class="close">&times;</button>
+            </div>
+        }
+    </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+
         <footer>
+            <hr />
             <p>&copy; @DateTime.Now.Year - <strong>White Lotus</strong></p>
         </footer>
     </div>
-
+    @RenderSection("foot", false)
 </body>
 </html>

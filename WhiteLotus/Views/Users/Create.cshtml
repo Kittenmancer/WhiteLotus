@@ -1,0 +1,70 @@
+﻿@model MapleGroup.Web.ViewModels.UsersViewModel
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-default">
+            <h3 class="card-title">
+                New User Account
+            </h3>
+            <form id="user-form" action="@Url.Action("Create")" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Username</label>
+                            @Html.TextBoxFor(m => m.User.Username, new {@class = "form-control req", @placeholder = "e.g. euser"})
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            @Html.TextBoxFor(m => m.User.DisplayName, new {@class = "form-control req", @placeholder = "e.g. Example User"})
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" name="user.Password" placeholder="Password">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" style="background-color:#efefef" id="generatePassword" data-container="body" data-toggle="popover" data-placement="top" type="button">Generate</button>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.User.Password)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Permissions</label><br />
+                            <small>NOTE: Developers can edit all content by default. Both boxes do <strong>not</strong> need to be ticked. Leave both boxes unticked to create a "standard user" account.</small><br />
+                            @Html.CheckBoxFor(m => m.User.IsDeveloper) - is developer <br />
+                            @Html.CheckBoxFor(m => m.User.IsContentManager) - can manage content
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <button class="btn btn-primary" id="user-create-trigger">Create Account</button>
+            <a class="btn btn-default" href="@Url.Action("Manage")">Cancel</a>
+        </div>
+    </div>
+</div>
+
+@section foot{
+    <script>
+        MapleGroup.Urls.zeroClipboardLocation = '@Url.Content("~/Scripts/vendor/ZeroClipboard.swf")';
+    </script>
+    <script src="~/Scripts/vendor/ZeroClipboard.js"></script>
+    <script src="@Url.Content("~/Scripts/app/users.js")"></script>
+}

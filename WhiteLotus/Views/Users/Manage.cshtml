@@ -1,0 +1,52 @@
+﻿@model MapleGroup.Web.ViewModels.UsersViewModel
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-default">
+            <h3 class="card-title">User Management</h3>
+            @if (Model.Users == null || !Model.Users.Any()) {
+                <p class="text-center">There doesn't seem to be anything here yet.</p>
+            } else {
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Display Name</th>
+                        <th>Username</th>
+                        <th colspan="2">User Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var user in Model.Users) {
+                        <tr class="@(user.Deleted ? "user-deleted" : "")">
+                            <td>
+                                @user.DisplayName
+                            </td>
+                            <td>@user.Username</td>
+                            <td>
+                                @user.UserType
+                            </td>
+                            <td class="text-right">
+                                @if (user.Id == ViewBag.CurrentUser.Id) {
+                                    <a href="@Url.Action("ChangeOwnPassword")" class="btn btn-xs btn-primary">Change Password</a>
+                                } else {
+                                    if (user.Deleted) {
+                                        <a href="@Url.Action("UnDelete", new {id = user.Id})" class="btn btn-xs btn-success" data-method="post">Enable Account</a>
+                                    } else {
+                                        <a href="@Url.Action("Edit", new {id = user.Id})" class="btn btn-xs btn-primary"><span class="fa fa-pencil"></span></a>
+                                        <a href="@Url.Action("Delete", new {id = user.Id})" class="btn btn-xs btn-danger" data-method="post"><span class="fa fa-close"></span></a>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-default">
+            <a class="btn btn-block btn-primary" href="@Url.Action("Create")"><span class="fa fa-plus"></span> Add New</a>
+        </div>
+    </div>
+</div>

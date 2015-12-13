@@ -1,0 +1,96 @@
+﻿@model MapleGroup.Web.ViewModels.UsersViewModel
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-default">
+            <h3 class="card-title">
+                Edit User Account
+            </h3>
+            <form id="user-form" action="@Url.Action("Edit")" method="POST">
+                @Html.HiddenFor(m => m.User.Id)
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Username</label>
+                            @Html.TextBoxFor(m => m.User.Username, new {@class = "form-control req", @placeholder = "e.g. euser"})
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            @Html.TextBoxFor(m => m.User.DisplayName, new { @class = "form-control req", @placeholder = "e.g. Example User" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Password</label><br/>
+                            <button class="btn btn-success" id="passwordButton">Change Password</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Permissions</label><br/>
+                            <small>NOTE: Developers can edit all content by default. Both boxes do <strong>not</strong> need to be ticked. Leave both boxes unticked to create a "standard user" account.</small><br/>
+                            @Html.CheckBoxFor(m => m.User.IsDeveloper) - is developer <br/>
+                            @Html.CheckBoxFor(m => m.User.IsContentManager) - can manage content
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <button class="btn btn-primary" id="user-save-trigger">Save Changes</button>
+            <a class="btn btn-default" href="@Url.Action("Manage")">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" role="dialog" id="passwordPopup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Change Password</h4>
+            </div>
+            <div class="modal-body" id="popoverBody">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="user_Password">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" name="user.Password" placeholder="Password">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" style="background-color: #efefef" id="generatePassword" data-container="body" data-toggle="popover" data-placement="top" type="button">Generate</button>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password"/>
+                    </div>
+                    <span id="passwordMismatch" style="display: none; font-weight: 700; color: #900;">Passwords do not match.</span>
+                    <span id="passwordEmpty" style="display: none; font-weight: 700; color: #900;">Password must be at least 10 characters long.</span>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="passwordSubmit">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section foot{
+<script>
+    MapleGroup.Urls.zeroClipboardLocation = '@Url.Content("~/Scripts/vendor/ZeroClipboard.swf")';
+    MapleGroup.Urls.changeOtherUserPassword = '@Url.Action("ChangeOtherUserPassword")';
+    MapleGroup.Ids.userId = '@Model.User.Id';
+</script>
+<script src="~/Scripts/vendor/ZeroClipboard.js"></script>
+    <script src="@Url.Content("~/Scripts/app/users.js")"></script>
+}

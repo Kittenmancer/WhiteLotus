@@ -30,7 +30,6 @@ namespace WhiteLotus.Controllers
         protected override void OnException(ExceptionContext filterContext)
         {
             Response.Clear();
-            /*new ErrorReporter(filterContext.Exception, filterContext.HttpContext).Send();*/ //come back and implement this later.
         }
     }
 }
