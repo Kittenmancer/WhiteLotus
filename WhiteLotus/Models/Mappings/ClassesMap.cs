@@ -20,7 +20,7 @@ namespace WhiteLotus.Models.Mappings
             Property(x => x.StartTime);
             Property(x => x.Duration);
             Property(x => x.Capacity);
-            ManyToOne(x => x.TaughtBy);
+            Property(x => x.TaughtBy);
             Property(x => x.Deleted);
         }
     }

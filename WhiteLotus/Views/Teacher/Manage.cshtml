@@ -1,0 +1,48 @@
+﻿@model WhiteLotus.ViewModels.TeacherViewModel
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-default">
+            <h3 class="card-title">Class Management</h3>
+            @if (Model.Classes == null || !Model.Classes.Any()) {
+                <p class="text-center">There doesn't seem to be anything here yet.</p>
+            } else {
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Class name/th>
+                        <th>Start Time</th>
+                        <th colspan="2">Taught By</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var Class in Model.Classes) {
+                        <tr class="@(Class.Deleted ? "class-deleted" : "")">
+                            <td>
+                                @Class.Name
+                            </td>
+                            <td>@Class.StartTime</td>
+                            <td>
+                                @Class.TaughtBy
+                            </td>
+                            <td class="text-right">
+                                    @if (Class.Deleted) {
+                                        <a href="@Url.Action("UnDelete", new {id = Class.Id})" class="btn btn-xs btn-success" data-method="post">Approve Class</a>
+                                    } else {
+                                        <a href="@Url.Action("Edit", new {id = Class.Id})" class="btn btn-xs btn-primary"><span class="fa fa-pencil"></span>Edit</a>
+                                        <a href="@Url.Action("Delete", new {id = Class.Id})" class="btn btn-xs btn-danger" data-method="post"><span class="fa fa-close"></span>Delete</a>
+                                    }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-default">
+            <a class="btn btn-block btn-primary" href="@Url.Action("Create")"><span class="fa fa-plus"></span> Add New</a>
+        </div>
+    </div>
+</div>

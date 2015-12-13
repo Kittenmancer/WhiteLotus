@@ -62,7 +62,10 @@ D:\Projects\WhiteLotus\WhiteLotus\bin\WhiteLotus.dll.config
 D:\Projects\WhiteLotus\WhiteLotus\bin\WhiteLotus.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\WhiteLotus.pdb
 D:\Projects\WhiteLotus\WhiteLotus\bin\Antlr3.Runtime.dll
+D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.dll
+D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.Integration.Mvc.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\Iesi.Collections.dll
+D:\Projects\WhiteLotus\WhiteLotus\bin\MarkEmbling.Utils.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\Microsoft.Web.Infrastructure.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\Newtonsoft.Json.dll
@@ -78,6 +81,8 @@ D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.WebPages.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.WebPages.Razor.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\WebGrease.dll
 D:\Projects\WhiteLotus\WhiteLotus\bin\Antlr3.Runtime.pdb
+D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.xml
+D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.Integration.Mvc.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\Iesi.Collections.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\Newtonsoft.Json.xml
@@ -91,11 +96,6 @@ D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.Razor.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.WebPages.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\WhiteLotus\WhiteLotus\bin\System.Web.WebPages.Razor.xml
-D:\Projects\WhiteLotus\WhiteLotus\obj\Debug\WhiteLotus.csprojResolveAssemblyReference.cache
 D:\Projects\WhiteLotus\WhiteLotus\obj\Debug\WhiteLotus.dll
 D:\Projects\WhiteLotus\WhiteLotus\obj\Debug\WhiteLotus.pdb
-D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.dll
-D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.Integration.Mvc.dll
-D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.xml
-D:\Projects\WhiteLotus\WhiteLotus\bin\Autofac.Integration.Mvc.xml
-D:\Projects\WhiteLotus\WhiteLotus\bin\MarkEmbling.Utils.dll
+D:\Projects\WhiteLotus\WhiteLotus\obj\Debug\WhiteLotus.csprojResolveAssemblyReference.cache

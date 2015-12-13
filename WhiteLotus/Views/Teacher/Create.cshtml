@@ -1,0 +1,64 @@
+﻿@model WhiteLotus.ViewModels.TeacherViewModel
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-default">
+            <h3 class="card-title">
+                New User Account
+            </h3>
+            <form id="user-form" action="@Url.Action("Create")" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Class Name</label>
+                            @Html.TextBoxFor(m => m.Class.Name, new {@class = "form-control req", @placeholder = "e.g. Yoga Class Name"})
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Teacher Name</label>
+                            @Html.TextBoxFor(m => m.Class.TaughtBy, new {@class = "form-control req", @placeholder = "e.g. Teacher Name"})
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Start Time</label>
+                            @Html.TextBoxFor(m => m.Class.StartTime, new { @class = "form-control req", @placeholder = "e.g. 10:00:00" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Duration</label>
+                            @Html.TextBoxFor(m => m.Class.Duration, new { @class = "form-control req", @placeholder = "e.g. 01:00:00" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Capacity</label>
+                            @Html.TextBoxFor(m => m.Class.Capacity, new { @class = "form-control req", @placeholder = "e.g. 10" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Date of Class</label>
+                            @Html.TextBoxFor(m => m.Class.Day, new { @class = "form-control req", @placeholder = "e.g. 10/10/2015" })
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+            <button class="btn btn-primary" id="user-create-trigger saveButton">Create Class</button>
+            <a class="btn btn-default" href="@Url.Action("Manage")">Cancel</a>
+        </div>
+    </div>
+</div>
+
+@section foot{
+    <script>
+        WhiteLotus.Urls.zeroClipboardLocation = '@Url.Content("~/Scripts/vendor/ZeroClipboard.swf")';
+    </script>
+    <script src="~/Scripts/vendor/ZeroClipboard.js"></script>
+    <script src="@Url.Content("~/Scripts/app/classes.js")"></script>
+}
