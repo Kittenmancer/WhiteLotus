@@ -12,10 +12,8 @@ namespace WhiteLotus.Models.Entities
         public virtual string Title { get; set; }
         public virtual string Forename { get; set; }
         public virtual string Surname { get; set; }
-        public virtual DateTime DOB { get; set; }
         public virtual int Experience { get; set; }
         public virtual bool Health { get; set; }
-        public virtual int MOB { get; set; }
         public virtual string Email { get; set; }
         public virtual bool isDeveloper {get; set; }
         public virtual bool isManager { get; set; }

@@ -20,7 +20,7 @@
     <script src="~/Scripts/vendor/bootstrap.js"></script>
     <script src="~/Scripts/vendor/slick.js"></script>
     <script src="~/Scripts/vendor/bootstrap-switch.js"></script>
-    <script src="@Url.Content("~/Scripts/app/site.js")"></script>
+    <script src="~/Scripts/app/site.js"></script>
     @RenderSection("head", false)
 </head>
 <body>
@@ -38,8 +38,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Register", "Session")">Register</a></li>
-                    <li><a href="@Url.Action("Index", "Session")">Login</a></li>
+                    @if (ViewBag.CurrentUser == null) {
+                    @*<li><a href="@Url.Action("Register", "Session")">Register</a></li>*@
+                    <li><a href="@Url.Action("Index", "Session")">Login</a></li> }
                     <li><a href="@Url.Action("Index","Booking")">Bookings</a></li>
                 </ul>
                 @if (ViewBag.CurrentUser != null) { 
@@ -50,15 +51,6 @@
                                 <span class="glyphicon glyphicon-user"></span><b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                @if (ViewBag.CurrentUser.isManager || ViewBag.CurrentUser.isDeveloper)
-                                {
-                                    <li>
-                                        <a href="@Url.Action("Manage", "Colleges")">Manage Member Colleges</a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Manage", "News")">Manage News Items</a>
-                                    </li>
-                                }
                                 @if (ViewBag.CurrentUser.isDeveloper)
                                 {
                                     <li class="divider"></li>

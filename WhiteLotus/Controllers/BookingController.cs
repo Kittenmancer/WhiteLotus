@@ -18,14 +18,22 @@ namespace WhiteLotus.Controllers
         public BookingController(ISession session)
         {
             _session = session;
+
+
         }
+        public ActionResult Index()
+        {
+            var vM = new BookingViewModel { };
+            return View(vM);
+        }
+
         public ActionResult GetBooking(int id)
         {
             var booking = _session.Get<Booking>(id);
             var vM = new BookingViewModel {
                 Bookings = new AllBookings().Execute(_session)
             };
-            return View(vM);
+            return View("Index",vM);
         }
         [HttpPost, ValidateInput(false)]
         public ActionResult Create(Booking booking)
@@ -39,26 +47,17 @@ namespace WhiteLotus.Controllers
             var vM = new BookingViewModel();
             return RedirectToAction("GetBooking");
         }
-
-        public ActionResult Edit(int id)
-        {
-            var booking = _session.Get<Booking>(id);
-            var vM = new BookingViewModel
-            {
-                Booking = booking
-            };
-            return View(vM);
-        }
-        [HttpPost, ValidateInput(false)]
-        public ActionResult Edit  (Booking booking)
+        [HttpPost, ManagersOnlyFilter, ValidateInput(false)]
+        public ActionResult CreateClass(Booking booking)
         {
             using (var tx = _session.BeginTransaction())
             {
                 _session.Save(booking);
                 tx.Commit();
             }
-            Notice = "Changes updated successfully.";
-            return RedirectToAction("GetBooking");
+            booking = new Booking();
+            var vM = new BookingViewModel();
+            return View("Index", vM);
         }
     }
 }

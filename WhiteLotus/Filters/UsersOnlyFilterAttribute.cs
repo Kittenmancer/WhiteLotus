@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using WhiteLotus.Controllers;
 
-namespace MapleGroup.Web.Filters
+namespace WhiteLotus.Filters
 {
     public class UsersOnlyFilterAttribute : AuthorizeAttribute
     {

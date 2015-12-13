@@ -7,8 +7,8 @@ using WhiteLotus.Filters;
 using WhiteLotus.Models.Entities;
 using WhiteLotus.Models.Queries;
 using WhiteLotus.ViewModels;
+using WhiteLotus.Controllers;
 using NHibernate;
-using MapleGroup.Web.Filters;
 
 namespace WhiteLotus.Controllers
 {
@@ -52,7 +52,7 @@ namespace WhiteLotus.Controllers
                 tx.Commit();
             }
             Notice = "User account \"" + user.Email + "\" created successfully.";
-            return RedirectToAction("Login");
+            return RedirectToAction("Login","Session");
         }
 
         [DevelopersOnlyFilter]

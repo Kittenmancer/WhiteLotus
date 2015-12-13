@@ -19,10 +19,8 @@ namespace WhiteLotus.Models.Mapping
             Property(x => x.Title);
             Property(x => x.Forename);
             Property(x => x.Surname);
-            Property(x => x.DOB);
             Property(x => x.Experience);
             Property(x => x.Health);
-            Property(x => x.MOB);
             Property(x => x.Email);
             Property(x => x.Password);
             Property(x => x.Deleted);

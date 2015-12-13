@@ -159,6 +159,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\app\enhancement.js" />
+    <Content Include="Scripts\app\mceConfigForTextAreas.js" />
+    <Content Include="Scripts\app\users.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -170,6 +173,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\vendor\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\vendor\ZeroClipboard.js" />
+    <Content Include="Scripts\vendor\ZeroClipboard.swf" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Booking\Index.cshtml" />
     <Content Include="Views\Session\Index.cshtml" />
@@ -204,7 +209,7 @@
     <Content Include="Content\images\header-logo.png" />
     <Content Include="Content\images\License.txt" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Scripts\app\Site.js" />
+    <Content Include="Scripts\app\site.js" />
     <Content Include="Scripts\vendor\bootstrap-switch.js" />
     <Content Include="Scripts\vendor\bootstrap.js" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />

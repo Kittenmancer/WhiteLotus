@@ -3,5 +3,40 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-default">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="card-title">
+                        Bookings
+                    </h3>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked nav-news" style="padding-bottom: 15px;">
+                @foreach (var potato in Model.Classes)
+                {
+                    <li>
+                            @potato.Name
+                            <br/>
+                            @potato.TaughtBy
 
+                      
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.CurrentUser != null && (ViewBag.CurrentUser.isDeveloper || ViewBag.CurrentUser.isManager))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-default">
+                        <a class="btn btn-block btn-primary" href="@Url.Action("Create")"><span class="fa fa-plus"></span> Add Story</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
