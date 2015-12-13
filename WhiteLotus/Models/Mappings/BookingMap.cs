@@ -17,7 +17,7 @@ namespace WhiteLotus.Models.Mappings
 
             Id(x => x.Id, m => m.Generator(Generators.Identity));
             Property(x => x.ClassBooked);
-            Property(x => x.BookedBy);
+            ManyToOne(x => x.BookedBy);
             Property(x => x.GonGiveItToYa);
         }
     }

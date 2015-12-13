@@ -38,9 +38,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Register", "Users")">Register</a></li>
-                    <li><a href="@Url.Action("Login", "Users")">Login</a></li>
-                    <li><a href="@Url.Action("Booking","Booking")">Bookings</a></li>
+                    <li><a href="@Url.Action("Register", "Session")">Register</a></li>
+                    <li><a href="@Url.Action("Index", "Session")">Login</a></li>
+                    <li><a href="@Url.Action("Index","Booking")">Bookings</a></li>
                 </ul>
                 @if (ViewBag.CurrentUser != null) { 
 
@@ -59,7 +59,7 @@
                                         <a href="@Url.Action("Manage", "News")">Manage News Items</a>
                                     </li>
                                 }
-                                @if (ViewBag.CurrentUser.IsDeveloper)
+                                @if (ViewBag.CurrentUser.isDeveloper)
                                 {
                                     <li class="divider"></li>
                                     <li>

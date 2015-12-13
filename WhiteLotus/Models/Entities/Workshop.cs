@@ -13,7 +13,7 @@ namespace WhiteLotus.Models.Entities
         public virtual DateTime StartTime { get; set; }
         public virtual int Duration { get; set; }
         public virtual int Capacity { get; set; }
-        public virtual string TaughtBy { get; set; }
+        public virtual Users TaughtBy { get; set; }
 
     }
 }

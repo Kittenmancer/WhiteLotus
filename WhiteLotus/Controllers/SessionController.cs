@@ -20,7 +20,7 @@ namespace WhiteLotus.Controllers
             _session = session;
         }
 
-        public ActionResult Login()
+        public ActionResult Index()
         {
             return View();
         }
@@ -29,7 +29,7 @@ namespace WhiteLotus.Controllers
         public ActionResult Login(string username, string password, string from = null)
         {
             // Retrieve the user based on the username
-            var user = new UserFromEmail(username).Execute(_session);
+            var user = new UserFromUsername(username).Execute(_session);
 
             if (user != null && user.Deleted)
             {

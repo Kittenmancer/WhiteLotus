@@ -15,6 +15,7 @@ namespace WhiteLotus.Models.Mapping
             Table("Users");
 
             Id(x => x.Id, m => m.Generator(Generators.Identity));
+            Property(x => x.Username);
             Property(x => x.Title);
             Property(x => x.Forename);
             Property(x => x.Surname);
@@ -23,10 +24,6 @@ namespace WhiteLotus.Models.Mapping
             Property(x => x.Health);
             Property(x => x.MOB);
             Property(x => x.Email);
-            Property(x => x.AddressRoad);
-            Property(x => x.AddressTown);
-            Property(x => x.AdressCounty);
-            Property(x => x.AdressPostCode);
             Property(x => x.Password);
             Property(x => x.Deleted);
             Property(x => x.isManager);

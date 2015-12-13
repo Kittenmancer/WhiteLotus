@@ -8,6 +8,7 @@ namespace WhiteLotus.Models.Entities
     public class Users
     {
         public virtual int Id { get; set; }
+        public virtual string Username { get; set; }
         public virtual string Title { get; set; }
         public virtual string Forename { get; set; }
         public virtual string Surname { get; set; }
@@ -18,10 +19,6 @@ namespace WhiteLotus.Models.Entities
         public virtual string Email { get; set; }
         public virtual bool isDeveloper {get; set; }
         public virtual bool isManager { get; set; }
-        public virtual string AddressRoad { get; set; }
-        public virtual string AddressTown { get; set; }
-        public virtual string AdressCounty { get; set; }
-        public virtual string AdressPostCode { get; set; }
         public virtual string Password { get; set; }
         public virtual bool Deleted { get; set; }
 

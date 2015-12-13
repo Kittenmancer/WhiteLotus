@@ -139,16 +139,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="DATA\WhiteLotus.mdf" />
     <Content Include="DATA\WhiteLotus_log.ldf">
       <DependentUpon>WhiteLotus.mdf</DependentUpon>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\vendor\jquery-1.10.2.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Booking\Index.cshtml" />
-    <Content Include="Views\Session\Login.cshtml" />
+    <Content Include="Views\Session\Index.cshtml" />
     <Content Include="Views\Session\Register.cshtml" />
     <Content Include="Views\Users\ChangeOwnPassword.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
@@ -267,7 +291,7 @@
     <Compile Include="Models\Mappings\UsersMap.cs" />
     <Compile Include="Models\Mappings\WorkshopMap.cs" />
     <Compile Include="Models\Queries\AllBookings.cs" />
-    <Compile Include="Models\Queries\UserFromEmail.cs" />
+    <Compile Include="Models\Queries\UserFromUsername.cs" />
     <Compile Include="NHibernateEntityBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestDelegatedBinder.cs" />
@@ -277,7 +301,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

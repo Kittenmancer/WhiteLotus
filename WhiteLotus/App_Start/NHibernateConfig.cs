@@ -14,10 +14,15 @@ namespace WhiteLotus
             var cfg = new Configuration();
 
             cfg.DataBaseIntegration(db => {
-                db.ConnectionStringName = "";
+                db.ConnectionStringName = "MyConnString";
                 db.Dialect<MsSql2005Dialect>();
                 db.BatchSize = 500;
                 db.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
+                if (MvcApplication.IsDebug())
+                {
+                    db.LogSqlInConsole = true;
+                    db.LogFormattedSql = true;
+                }
             });
 
             // Add mappings

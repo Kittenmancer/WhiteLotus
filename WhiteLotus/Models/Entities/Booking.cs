@@ -9,7 +9,7 @@ namespace WhiteLotus.Models.Entities
     {
         public virtual int Id { get; set; }
         public virtual int ClassBooked { get; set; }
-        public virtual int BookedBy { get; set; }
+        public virtual Users BookedBy { get; set; }
         public virtual bool GonGiveItToYa { get; set; }
     }
 }
